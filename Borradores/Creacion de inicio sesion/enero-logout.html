@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+web o pagina: Login logout
+alumno: Jesús Guirao Melero
+fecha: Enero de 2021
+-->
+
+<head>
+  <title>Web Proyecto Integrador</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="estilos.css"/>
+    <style>
+	/* aquí estilos aplicados solo a esta pagina */
+	body {
+		background: rgba(47, 173, 223, 0.1) /* Azul al 10% */
+	}
+  </style>
+  <script>
+	// seccion de codigo javascript 
+  </script>
+</head>
+
+
+<body>
+	<header>
+		<h1></h1> <!-- 1 y solo 1 por pagina -->
+	</header>
+	<div id="logout">
+	<main> <!-- aqui podemos tambien usar section y article -->
+		<p>Bienvenido <span id="aqui"></span></p>
+		<form name="miformulario" onsubmit="return borraUsr()">
+		<input type="submit" value="Salir">
+		</form>
+
+	</main>
+</div>
+	<footer>
+	
+	</footer>
+	
+
+	<script>
+	// seccion de codigo javascript 
+		// La siguiente linea recupera el valor guardado previamente
+		// Con sessionStorage funciona solo recargando, con localStorage incluso apagando el PC
+		document.getElementById("aqui").innerHTML=sessionStorage.getItem("nomUsr");
+		function borraUsr() {
+		//elimino la variable nomUsr
+		sessionStorage.removeItem("nomUsr");
+		//cargar la pagina del login...
+		window.open("enero-login.html");
+		}
+	</script>
+</body>
+</html>

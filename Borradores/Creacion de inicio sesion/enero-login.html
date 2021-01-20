@@ -24,19 +24,16 @@ fecha: Enero de 2021
 
 
 <body>
-	<header>
-		<h1>TÍTULO PRINCIPAL VISIBLE</h1> <!-- 1 y solo 1 por pagina -->
-	</header>
-	
+	<div id="login" >
 	<main> <!-- aqui podemos tambien usar section y article -->
 		<form name="miformulario" onsubmit="return guardaUsr()">
 		<label for="fname">Usuario: </label><br>
 		<input type="text" id="usuario" name="usuario" maxlength="25" required><br>
 		<input type="submit" value="Enviar">
 		</form>
-		<p id="aqui">(aqui veremos el usuario activo)</p>
+		
 	</main>
-	
+	</div>
 	<footer>
 	
 	</footer>
@@ -45,12 +42,12 @@ fecha: Enero de 2021
 	<script>
 	// seccion de codigo javascript 
 
-		function guardaUsr() {
-			var x=document.forms["miformulario"]["usuario"].value;
-			sessionStorage.setItem("nomUsr",x);
-			document.getElementById("aqui").innerHTML = sessionStorage.getItem("nomUsr");
-			return false;
-		}
+	function guardaUsr() {
+		  // guardo la variable nomUsr con el usuario ingresado en el formulario
+		  sessionStorage.setItem("nomUsr", document.forms["miformulario"]["usuario"].value);
+		  // carga la pagina de logout...
+		  window.open("enero-logout.html");
+		 }
 	</script>
 </body>
 </html>

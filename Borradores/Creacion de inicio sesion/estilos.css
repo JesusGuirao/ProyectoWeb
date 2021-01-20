@@ -15,7 +15,7 @@ Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
   /* estilo:valor; */
 }
 
-div {
+div { 
   /* estilos para todos los elementos <div>; */
   /* estilo:valor; */
   
@@ -61,7 +61,13 @@ pseudo-atributos: https://www.w3schools.com/css/css_attribute_selectors.asp
 formularios: https://www.w3schools.com/css/css_form.asp
 */
 
+#login {
+  float: left;
+}
 
+#logout {
+  float: right;
+}
 
 
 
