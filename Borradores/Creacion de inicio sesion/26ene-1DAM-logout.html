@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+Tema: Web Storage - localstorage y sessionstorage 
+alumno: Jesús Guirao Melero
+fecha: 26 enero
+-->
+
+<head>
+  <title>HTML5 - WebStorage - sessionStorage</title>
+  <meta charset="UTF-8"/> 
+  <link rel="stylesheet" href="estilo26enelogout.css"/>
+
+</head>
+
+
+<body>
+	<header>
+		<div id="di">
+			<!-- contenido del div izquierdo -->
+			<p>Prueba texto</p>
+		</div>
+		<div id="dc">
+			<!-- contenido del div central -->
+			<p>Prueba texto</p>
+		</div>
+
+		<div id="dd">
+		<!--Div derecho-->
+		<form name="miFormulario" onSubmit="return salir()">
+			 <input type="submit" value="salir">
+		   </form>
+		   <br/>
+		   <div>
+
+		   </div>
+		   <div id="mensaje"></div>
+		</div>
+	
+
+	</header>		
+
+		
+	
+<script>
+  // seccion de codigo javascript 
+		// Valida que el browser lo permita
+	document.getElementById("mensaje").innerHTML = sessionStorage.getItem("usuario");
+	
+	function salir(){
+		if (typeof(Storage) !== "undefined") {
+		  // Almacena un valor usando el método setItem del objeto localStorage
+		  sessionStorage.removeItem("usuario");
+		  // Recupera el valor usando el método getItem del objeto localStorage
+		} else {
+		  alert("Este navegador no soporta Web Storage")
+		}
+		window.location.replace("26ene-1DAM-login.html");
+		return false;
+	}
+</script>
+<h2 id="titulo"><br> <br> <br> LOGIN Y LOGOUT</h2>
+</body>
+</html>
+
+
+
