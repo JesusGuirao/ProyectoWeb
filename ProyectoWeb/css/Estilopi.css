@@ -99,7 +99,7 @@ body{
 }
 
 .container .card{
-    width: 330px;
+    width: 500px; /* Esto es el ancho de la tarjeta*/
     height: 430px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
@@ -115,7 +115,7 @@ body{
 }
 
 .container .card img{
-    width: 330px;
+    width: 330px; /* Esto es el ancho de la imagen de la tarjeta*/
     height: 220px;
 }
 
