@@ -3,8 +3,15 @@
 }
 
 body {
-  background-image: url('../media/fondomar.jpg');
+  /*background-image: url('../media/prueba\ fondo.HEIC');
   background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0; */
+  background: url('../media/prueba\ fondo.HEIC') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -118,4 +125,65 @@ li.dropdown {
   border-top: 4px solid;
   border-bottom: 4px solid;
   transform: skewY(-20deg);
+}
+
+/* Tarjetas Para el Top 3 */
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+  margin-top: 100px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.container .card {
+  width: 360px; /* Esto es el ancho de la tarjeta*/
+  height: 530px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img {
+  width: 330px; /* Esto es el ancho de la imagen de la tarjeta*/
+  height: 170px;
+}
+
+.container .card h4 {
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+.container .card p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  color: #f5f5f5;
+}
+
+.container .card a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #f8f8f8;
 }
